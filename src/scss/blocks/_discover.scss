@@ -1,0 +1,75 @@
+.discover {
+	position: relative;
+	background-color: #678292;
+	backdrop-filter: blur(2px); //2
+	min-height: 100vh;
+	z-index: 2;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: #00000067;
+		backdrop-filter: blur(2px); //2
+		z-index: 0;
+	}
+
+	overflow: hidden;
+}
+
+.discover__img {
+	background-image: url('./../img/main-photo.png');
+	background-position: center top; // x y
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100%;
+	position: absolute;
+	inset: 0;
+	animation: discoverImg 20s infinite;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: #00000067;
+		backdrop-filter: blur(2px); //2
+		z-index: 0;
+	}
+}
+
+@keyframes discoverImg {
+	0% {
+		transform: scale(1);
+	}
+
+	20% {
+		transform: scale(1.1);
+	}
+
+	40% {
+		transform: scale(1);
+	}
+}
+
+.discover__inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	color: #fff;
+}
+
+.discover__title {
+	font-size: 70px;
+	font-weight: 500;
+}
+
+.discover__subtitle {
+	font-size: 16px;
+}

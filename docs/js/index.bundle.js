@@ -1,0 +1,1 @@
+!function(){const e=document.querySelector(".header__nav-item--search"),t=document.querySelector(".header__nav-item--search>div");e.onclick=e=>{e.stopPropagation()},document.addEventListener("click",(function(t){t.stopPropagation(),e.classList.remove("search-active")})),t.addEventListener("click",(()=>e.classList.toggle("search-active")))}();
